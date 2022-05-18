@@ -11,66 +11,106 @@
 </head>
 
 <body>
-    <div style="width: 50%; margin: 1% 10% 10% 10%;">
-        <form class="row g-3">
-            <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Name</label>
-                <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Number phone</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <select class="form-select" aria-label="Default select example" style="width: 676px; display: inline-block; position: relative; left: 5px;">
-                <option selected>Select one address</option>
-                <option value="1">Prados II</option>
-                <option value="2">Prados III</option>
-                <option value="3">Tintala IV</option>
-              </select>
-            <div class="col-12">
-                <label for="inputAddress2" class="form-label">Address 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
+    <main class="container">
+        <div class="card pe-2 ps-2 pb-2 bg-secondary">
+            <p class="display-6">La barca China</p>
+            <form class="row g-3 ">
+                <div class="col-md-6 ">
+                    <label class="form-label ">Name</label>
+                    <input type="text " class="form-control " id="inputName ">
                 </div>
-            </div>
-            <table class="table table-striped">
-                <td> <label for="inputState" class="form-label">product</label>
-                    <select id="inputState" class="form-select">
-                      <option selected>selecciona tu producto</option>
-                      <option>Arroz chino</option>
-                      <option>Arroz paisa</option>
-                      <option>1/4 pollo Broaster</option>
-                      <option>1/2 pollo Broaster</option>
-                    </select>
-                </td>
-                <td>
-                    <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                    </div>
-                </td>
-                <td>
-                    <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                    </div>
-                </td>
-
-            </table>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Imprimir
-                
-                </button>
-            </div>
-        </form>
-    </div>
-
+                <div class="col-md-6 ">
+                    <label class="form-label ">Number phone</label>
+                    <input type="number " class="form-control " id="inputNumberPhone">
+                </div>
+                <div class="col-md-6 ">
+                    <select class="form-select " aria-label="Default select example ">
+                        <option selected>Select one address</option>
+                        <option value="1 " ">Prados I</option>
+                        <option value="2 " ">Prados II</option>
+                        <option value="3 " ">Prados III</option>
+                        <option value="4 " ">Prados IV</option>
+                        <option value="5 " ">Tintala I</option>
+                        <option value="6 ">Tintala II</option>
+                        <option value="7 ">Tintala III</option
+                        <option value="8 ">Tintala IV</option>
+                      </select>
+                </div>
+                <div class="col-md-6 ">
+                    <input type="text " class="form-control " id="inputAddress2 " placeholder="Apartment, torre, int">
+                </div>
+                <div class="col-12 ">
+                    <table class="table table-striped ">
+                        <tr>
+                            <td>
+                                <div class="col-12 ">
+                                    <label id="idRef " class="form-label ">Referencia</label>
+                                    <input type="number " class="form-control " id="inputRef ">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-12 ">
+                                    <label for="inputState " id="productosId " class="form-label ">product</label>
+                                    <select id="inputState " class="form-select ">
+                                    <option selected>selecciona tu producto</option>
+                                    <option id="arrozChino " data-producto="arrozChino" data-precio="16500 ">Arroz chino</option>
+                                    <option id="arrozPaisa">Arroz paisa</option>
+                                    <option id="pollo1/4">1/4 pollo Broaster</option>
+                                    <option id="pollo1/2">1/2 pollo Broaster</option>
+                                    <option id="pollo">1 pollo Broaster</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-12 ">
+                                    <label id="idCantidad " class="form-label ">cantidad</label>
+                                    <input type="number" class="form-control " id="inputcantidad ">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="col-12 ">
+                                    <label id="idPrecio " class="form-label ">precio</label>
+                                    <input type="number " class="form-control " id="inputPrecio  ">
+                                </div>
+                            </td>
+                        </tr>
+                        <template id="templateProduct">
+                        <tr>
+                            <td>
+                                <select id="inputState " class="form-select ">
+                                <option selected>selecciona tu producto</option>
+                                <option id="arrozId " value="16500 ">Arroz chino</option>
+                                <option>Arroz paisa</option>
+                                <option>1/4 pollo Broaster</option>
+                                <option>1/2 pollo Broaster</option>
+                              </select>
+                            </td>
+                            <td>
+                                <input type="text " class="form-control " id="inputAddress2 ">
+                            </td>
+                            <td>
+                                <input type="text " class="form-control " id="inputAddress2 ">
+                            </td>
+                        </tr>
+                    </template>
+                    </table>
+                </div>
+                <div class="col-md-4 ">
+                    <label class="form-label ">total</label>
+                    <input type="number " class="form-control " id="inputPassword4 ">
+                </div>
+                <div class="col-12 ">
+                    <button type="submit " class="btn btn-primary ">Imprimir
+                        
+                        </button>
+                    <button type="submit " class="btn btn-success ">guardar
+                        
+                        </button>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
+<script src="facturador.js "></script>
 
 </html>
